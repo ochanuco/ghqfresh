@@ -1,0 +1,18 @@
+name: ci
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  ci:
+    uses: ochanuco/.github/.github/workflows/go.yml@22bdff85ba48326771aad04144b37702e011bf7c # v1.6.1
