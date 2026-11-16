@@ -15,4 +15,4 @@ concurrency:
 
 jobs:
   ci:
-    uses: ochanuco/.github/.github/workflows/go.yml@22bdff85ba48326771aad04144b37702e011bf7c # v1.6.1
+    uses: ochanuco/.github/.github/workflows/go.yml@194995de7425c6457f8d802510787afd02ed9235 # v1.7.0
